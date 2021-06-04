@@ -1,0 +1,8 @@
+3.2 Back-translation with Liblouis
+Back-translation is carried out by the function lou_backTranslateString. Its calling sequence is described in Programming with liblouis. lou_backTranslateString first performs pass4, if present, then pass3, then pass2, then the backtranslation, then corrections. Note that this is exactly the inverse of forward translation.
+
+Most opcodes can be preceded by noback opcode (see noback) or nofor opcode (see nofor), and the correct, context and multi-pass opcodes must be preceded with either noback or nofor. So in most cases, it will be perfectly possible to make one table for translation in both directions, although a separate table for forward and backward translation might be more readable in some cases.
+
+Most of the opcodes associated with pass 1 have two operands, a character operand to the left and a dots operand to the right. During forward translation, these operands are used to replace the characters with the dot pattern according to the conditions of the opcode. The opcode works from left to right. When back-translating, these opcodes work the opposite way. The dot patterns are replaced by the text. The opcodes work from right to left.
+
+On the other hand, the correct, context and multi-pass opcodes have a test part to the left and an action part to the right. These opcodes work from left to right in both translation directions. The test is performed, and if true, the action is executed, i.e. replacing, inserting or deleting characters or dots. This is why a translation direction always has to be specified with these opcodes using noback or nofor.

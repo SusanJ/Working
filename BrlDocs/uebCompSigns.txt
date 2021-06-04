@@ -1,0 +1,92 @@
+"7 = 003d equals
+"7@: ≠ 2260 not equal to [cancellation line through an 
+equals]
+@< < 003c less-than
+@> > 003e greater-than
+_@< ≤ 2264 less-than or equal to [bar under less-than]
+_@> ≥ 2265 greater-than or equal to [bar under greaterthan]
+.@< ≪ 226a much less-than [nest of two less-than signs]
+.@> ≫ 226b much greater-than [nest of two greater-than 
+signs]
+_= ≡ 2261 identical to, congruent to, equivalent to [three 
+horizontal lines
+
+#_l ⦀ 2980 triple vertical bar delimiter, similar to [three 
+vertical lines]
+#_l ⫴ 2af4 triple vertical bar binary relation, similar to 
+[three vertical lines]
+#_l ⫼ 2afc large triple vertical bar operator [three vertical 
+lines]
+@9 ∼ 223c tilde operator, similar to, varies with, difference 
+between [midline tilde]
+@9 ~ 007e tilde [midline tilde]
+_9 ≃ 2243 asymptotically equal to, approximately equal to 
+[tilde over horizontal line]
+^9 ≈ 2248 almost equal to, approximately equal to, 
+asymptotic to [tilde over tilde]
+"_9 ≅ 2245 approximately equal to, congruent to [tilde over 
+equals]
+."7 ≑ 2251 geometrically equal to, approximately equal to, 
+equivalent to [equals dotted above and below]
+#_l ⦀ 2980 triple vertical bar delimiter, similar to [three 
+vertical lines]
+#_l ⫴ 2af4 triple vertical bar binary relation, similar to 
+[three vertical lines]
+#_l ⫼ 2afc large triple vertical bar operator [three vertical 
+lines]
+@9 ∼ 223c tilde operator, similar to, varies with, difference 
+between [midline tilde]
+@9 ~ 007e tilde [midline tilde]
+_9 ≃ 2243 asymptotically equal to, approximately equal to 
+[tilde over horizontal line]
+^9 ≈ 2248 almost equal to, approximately equal to, 
+asymptotic to [tilde over tilde]
+"_9 ≅ 2245 approximately equal to, congruent to [tilde over 
+equals]
+."7 ≑ 2251 geometrically equal to, approximately equal to, 
+equivalent to [equals dotted above and below]
+#_l ⦀ 2980 triple vertical bar delimiter, similar to [three 
+vertical lines]
+#_l ⫴ 2af4 triple vertical bar binary relation, similar to 
+[three vertical lines]
+#_l ⫼ 2afc large triple vertical bar operator [three vertical 
+lines]
+@9 ∼ 223c tilde operator, similar to, varies with, difference 
+between [midline tilde]
+@9 ~ 007e tilde [midline tilde]
+_9 ≃ 2243 asymptotically equal to, approximately equal to 
+[tilde over horizontal line]
+^9 ≈ 2248 almost equal to, approximately equal to, 
+asymptotic to [tilde over tilde]
+"_9 ≅ 2245 approximately equal to, congruent to [tilde over 
+equals]
+."7 ≑ 2251 geometrically equal to, approximately equal to, 
+equivalent to [equals dotted above and below]
+^"7 ≏ 224f difference between, approximately equal to 
+[equals with bump in top bar]
+_"7 ∝ 221d proportional to, varies as [infinity sign open on 
+the right]
+33 ∷ 2237 proportion, as [two colons]
+#l ∥ 2225 parallel to [two vertical lines
+
+#- ⟂ 27c2 perpendicular to, orthogonal to [vertical line 
+meeting horizontal line]
+Refer to: Section 6, Fractions, for fraction lines; Section 10, S
+
+
+
+10
+1
+3
+n
+n
+"the sum from n equals 1 to 10 of 3n"
+,.s.5;<n"7#a>.9#aj#cn
+
+capital greek s ,.s
+.5 ;
+< n "7 #a >   grouping n = #1
+.9 i[
+#10 #3n
+Nemetn
+".,s %n .k 0 up 10 ] 3n

@@ -1,0 +1,1 @@
+java -jar C:\Users\easjo\OneDrive\Desktop\UEBbt2021\antlr-4.9.2-complete.jar -o src\org\dotlessbraille\antlr4 uebMathParser.g4
