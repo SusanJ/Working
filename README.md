@@ -9,3 +9,5 @@ In case you aren't familiar with Java j ar files they are the standard way of di
 https://www.java.com/en/download/manual.jsp
 
 Of course once I stop making frequent change to the app s it will be appropriate to "jar up" the necessary files so as distribute the executable.
+
+I currently do all my development in Windows 10  on my Surface laptop.  I use a very old-fashiond approach.  I do not use an IDE (Integrated Development Environmnt) or similar tools.   I just use the Windows Command Prompt and the Windows Batch (.bat) files include here. This leads to a very fast development cycle of a minute or so to make a wuick change, update the affected files, and do a quick test. The folder I work im uses a standard Java approach to organizing class files.
