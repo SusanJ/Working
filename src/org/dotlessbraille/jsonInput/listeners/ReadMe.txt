@@ -1,0 +1,1 @@
+Apparently I was trying to use proper Java listeners and events.  Will need to wait and review more.
