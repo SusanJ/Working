@@ -1,0 +1,78 @@
+//======================================================
+//  Early out-of-date Nemeth backtranslator for
+// Nemeth with UEB -- TODO: replace with BackNem
+//======================================================
+ // Nemeth start and end display indicators *may* be placed
+ //on a line by themselves.
+@Override 
+public void exitNemethStartDisplay(simpleParser.NemethStartDisplayContext ctx) { 
+ System.out.println( "\n  Nemeth Start Display Indicator" );
+ String brl = ctx.getText();
+ System.out.println( "Nem indicator--brl: |"+brl+"|" );
+  //Must be consistent with NemethIndicator braille, NOT parser
+ String fbrl = "D"+brl; //2 Inds with same braille
+ String ink =
+   statusManager.backTrans( fbrl, KeepTrack.Trans.NEM_DISPLAY_IND );
+ System.out.println( "Nem indicator--ink: "+ink );
+ setInk( ctx, ink );
+}
+@Override 
+public void exitNemethStartInline(simpleParser.NemethStartInlineContext ctx) { 
+ System.out.println( "\n  Nemeth Start Display Indicator" );
+ String brl = ctx.getText();
+ System.out.println( "Nem indicator--brl: |"+brl+"|" );
+  //Must be consistent with NemethIndicator braille, NOT parser
+ //String fbrl = brl; //2 Inds with same braille
+ String ink =
+   statusManager.backTrans( brl, KeepTrack.Trans.NEM_INLINE_IND );
+ System.out.println( "Nem indicator--ink: "+ink );
+ setInk( ctx, ink );
+}
+
+@Override 
+ public void enterNemethGeneric(simpleParser.NemethGenericContext ctx) { 
+ System.out.println( "enter Nemeth Generic " );
+ System.out.println( "  brl: |"+ctx.getText()+"|");
+}
+	
+@Override 
+ public void exitNemethGeneric(simpleParser.NemethGenericContext ctx) { }
+
+@Override
+public void exitNemSyms(simpleParser.NemSymsContext ctx) {
+  System.out.println( "\n Nemeth Symbols" );
+  String brl = ctx.getText();
+  System.out.println( "Nem symbols--brl: |"+brl+"|" );
+  int cnt = ctx.getChildCount();
+  String ink;
+  StringBuilder buf = new StringBuilder();
+  for (int i=0; i<cnt; i++){
+   brl = ctx.getChild(i).getText();
+   if (!brl.equals( " .k ")){
+    ink = brl;
+   } else {
+    ink = " = ";
+   }
+   buf.append( ink );
+   setInk( ctx.getChild(i), ink );
+  }
+  System.out.println( "Print expr: "+buf.toString() );
+  setInk( ctx, buf.toString() );
+ }
+
+//NEED TO HAVE ITEM THAT IS A COMPLETE "WORD" ???
+
+/**
+Normally you would use the generated accessor methods
+instead. For example, if you have a rule foo : bar;, 
+instead of using
+if (fooContext.getChild(1) instanceof BarContext) you would use
+ if (fooContext.bar() != null). 
+– Sam Harwell Jul 13 '13 at 1:26
+
+  symseq: ( numfrag | item | nemethGeneric )+ ;
+
+*/
+//======================================================
+// End of early out-of-date Nemeth backtranslator.
+//======================================================
