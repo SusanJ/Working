@@ -1,0 +1,61 @@
+package org.dotlessbraille.transtables;
+
+ //  Directs backtranslation for alphabetic symbols
+ //  Supposed to be single symbols, not sequences
+ // several symbols
+
+static final String DOT6 = ",";
+
+class AlphabeticSymbolHandler{
+ PendingCapInds capInfo;
+ AlphabeticsymbolHandler( PendingCapInds capInfo; ){
+  this.capInfo = capInfo;
+ }
+public String backTrans( String aBrl ){
+
+  //  Handle letters first since logic in Letter
+  // takes into account a dot6 or dots56 prefix
+  String ink = Letter.backTrans( aBrl );
+  if (ink != null) return ink;
+
+  boolean titleCase = false;
+  int is = 0;
+  String brl = aBrl;
+  //Handling special case of title case contractions
+  //Would dot6 precede a g1 indicator or is that relevant???
+  if (aBrl.length() > 1 ){
+   if ( DOT6.equals( aBrl.substring(0,1) ) ){
+    titleCase = true;
+    is = 1;
+    brl = aBrl.substring( is );
+    return getTCbackTrans( brl );
+   }
+  }
+  
+  //  If the terminator is somewhere in the word
+  // this will be null OOPS
+  // Check first???+
+  if (capInfo.getCapWordInd()){
+   return getUCbackTrans( aBrl );
+  } else if (capInfo.getCapPassInd()) {
+   return getUCBackTrans( aBrl);
+  } else {
+   return getLCBackTrans( aBrl );
+  }
+}
+ String getLCbackTrans( String brl ){
+  String ink = LargeWord.backLC( ink );
+  if (ink != null) return ink;
+  return ink;
+ }
+ String getTCbackTrans( String brl ){
+  String ink = LargeWord.backTC( ink );
+  if (ink != null) return ink;
+  return ink;
+ }
+ String getUCbackTrans( String brl ){
+  String ink = LargeWord.backUC( ink );
+  if (ink != null) return ink;
+  return ink;
+ }
+}
